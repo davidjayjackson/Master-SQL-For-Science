@@ -1,4 +1,4 @@
-# Master-SQL-For-Science
+# Master-SQL-For-Data-Science
 Course on Udemy
 
 ### Example SQL code 
