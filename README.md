@@ -53,7 +53,7 @@ WHERE TotalOrderAmount >=15000
 ORDER BY TotalOrderAmount desc;
 ```
 
-Assignment 7: ADVANCED Problems using Joins, Grouping and Subqueries
+#### Assignment 7(section 44: ADVANCED Problems using Joins, Grouping and Subqueries
 Write a query that shows the student's name, the courses the student is taking and the professors that teach that course.
 
 ```
