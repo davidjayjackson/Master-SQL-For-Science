@@ -52,3 +52,19 @@ FROM  big_spenders
 WHERE TotalOrderAmount >=15000
 ORDER BY TotalOrderAmount desc;
 ```
+
+Assignment 7: ADVANCED Problems using Joins, Grouping and Subqueries
+Write a query that shows the student's name, the courses the student is taking and the professors that teach that course.
+
+```
+SELECT student_name,c.course_title,t.last_name
+FROM students s 
+INNER JOIN student_enrollment e
+ON s.student_no = e.student_no
+INNER JOIN courses c
+ON e.course_no = c.course_no
+INNER JOIN teach t
+ON c.course_no = t.course_no
+GROUP BY student_name,c.course_title,t.last_name
+ORDER BY student_name,c.course_title;
+```
