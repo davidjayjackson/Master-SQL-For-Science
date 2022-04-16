@@ -68,8 +68,9 @@ ON c.course_no = t.course_no
 GROUP BY student_name,c.course_title,t.last_name
 ORDER BY student_name,c.course_title;
 ```
-#### In the video lectures, we've been discussing the employees table and the departments table. 
-Considering those tables, write a query that returns employees whose salary is above average for their given department.
+
+#### Section 44 Question 6: 
+In the video lectures, we've been discussing the employees table and the departments table. Considering those tables, write a query that returns employees whose salary is above average for their given department.
 
 ```
 WITH avg_salary 
