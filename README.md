@@ -68,3 +68,25 @@ ON c.course_no = t.course_no
 GROUP BY student_name,c.course_title,t.last_name
 ORDER BY student_name,c.course_title;
 ```
+#### In the video lectures, we've been discussing the employees table and the departments table. 
+Considering those tables, write a query that returns employees whose salary is above average for their given department.
+
+```
+WITH avg_salary 
+AS
+(
+SELECT 
+department,
+round(AVG(salary)) as average_salary
+FROM employees
+GROUP BY department
+) 
+SELECT last_name, 
+a.average_salary,
+e.salary,
+e.salary - a.average_salary as salary_difference
+FROM employees e
+INNER JOIN avg_salary a
+ON e.department = a.department
+WHERE e.salary >a.average_salary
+```
